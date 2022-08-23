@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "0d4d39a3-f592-4591-972d-e4b1b76a4f74",
+		"name": "BC30-Project02-Bank-microservice-03-Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22592653"
+	},
+	"item": [
+		{
+			"name": "Endpoint operation_passive",
+			"item": [
+				{
+					"name": "01-create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeOperationPassive\" : \"OP-0000000005\",\r\n    \"name\" : \"prueba\",\r\n    \"description\" : \"prueba\",\r\n    \"operationDate\" : \"2022-08-10T18:45:03.206+0000\",\r\n    \"principalBalance\" : \"0.0\",\r\n    \"balanceCurrent\" : \"0.0\",\r\n    \"balanceMove\" : \"0.0\",\r\n    \"balanceCommission\" : \"0.0\",\r\n    \"balanceNew\" : \"0.0\",\r\n    \"state\" : \"1\",\r\n    \"codeProduct\" : \"P-0000000001\",    \r\n    \"codeOperationType\" : \"OT-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readByCodeOperationPassive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive/readByCodeOperationPassive/OP-0000000001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive",
+								"readByCodeOperationPassive",
+								"OP-0000000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

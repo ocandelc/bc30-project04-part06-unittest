@@ -1,0 +1,1084 @@
+{
+	"info": {
+		"_postman_id": "b1d9cd48-dded-4d09-9250-d81a1b123465",
+		"name": "BC30-Project02-Bank-microservice-01-Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17565278"
+	},
+	"item": [
+		{
+			"name": "Endpoint product",
+			"item": [
+				{
+					"name": "01-create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/product/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/product/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint currency_type",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"name\" : \"DOLARES\",\r\n    \"description\" : \"MONEDA DE DOLARES\",\r\n    \"state\" : \"1\",\r\n    \"codeCurrencyType\" : \"CT-0000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/currencytype/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"currencytype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/currencytype",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"currencytype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"name\" : \"EUROS\",\r\n    \"description\" : \"MONEDA DE EUROS\",\r\n    \"state\" : \"1\",\r\n    \"codeCurrencyType\" : \"CT-0000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/currencytype/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"currencytype",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/currencytype/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"currencytype",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint person",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"codePerson\" : \"PP-0000000002\",\r\n    \"nameFirst\" : \"Alberto\",\r\n    \"nameSecond\" : \"Pablo\",\r\n    \"surnameFirst\" : \"Sanchez\",\r\n    \"surnameSecond\" : \"Velasquez\",\r\n    \"birthday\" : \"1984-04-19T05:00:00.000+0000\",\r\n    \"numberDocumentType\" : \"86543678\",\r\n    \"state\" : \"1\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codePersonType\" : \"PPT-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/person/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"person",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"codePerson\" : \"PP-0000000002\",\r\n    \"nameFirst\" : \"Alberto\",\r\n    \"nameSecond\" : \"Pablo\",\r\n    \"surnameFirst\" : \"Quispe\",\r\n    \"surnameSecond\" : \"Velasquez\",\r\n    \"birthday\" : \"2004-04-19T05:00:00.000+0000\",\r\n    \"numberDocumentType\" : \"86543678\",\r\n    \"state\" : \"1\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codePersonType\" : \"PPT-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/person/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"person",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/person/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"person",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint person_type",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"TIPO\",\r\n    \"description\" : \"TIPO PERSONA\",\r\n    \"state\" : \"1\",\r\n    \"codePersonType\" : \"PPT-0000000003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/personType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"personType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/personType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"personType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"TIPO MODIFICADO\",\r\n    \"description\" : \"TIPO PERSONA MODIFICADO\",\r\n    \"state\" : \"1\",\r\n    \"codePersonType\" : \"PPT-0000000003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/personType/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"personType",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/personType/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"personType",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint product_client",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeClient\" : \"C-0000000004\",\r\n    \"codeProduct\" : \"P-0000000004\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productClient/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productClient",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productClient/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productClient",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint product_person",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeProduct\" : \"P-0000000002\",\r\n    \"codePerson\" : \"PP-0000000002\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productPerson/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productPerson",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productPerson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productPerson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeProduct\" : \"P-0000000002 MODIFICADO\",\r\n    \"codePerson\" : \"PP-0000000002 MODIFICADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productPerson/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productPerson",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productPerson/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productPerson",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint product_subtype",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CUENTA BANCARIA AHORRO - EUROS\",\r\n    \"description\" : \"CUENTA BANCARIA AHORRO - EUROS\",\r\n    \"state\" : \"1\",\r\n    \"codeProductSubtype\" : \"PS-0000000008\",\r\n    \"codeProductType\" : \"PT-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtype/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtype",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CUENTA BANCARIA AHORRO - EUROS MODIFICADO\",\r\n    \"description\" : \"CUENTA BANCARIA AHORRO - EUROS MODIFICADO\",\r\n    \"state\" : \"1\",\r\n    \"codeProductSubtype\" : \"PS-0000000008\",\r\n    \"codeProductType\" : \"PT-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtype/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtype",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint product_subtype_rule",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeRule\" : \"R-0000000004\",\r\n    \"codeProductSubtype\" : \"PS-0000000005\",\r\n    \"codeProductSubtypeRule\" : \"PSR-0000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtyperule/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtyperule",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtyperule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtyperule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeRule\" : \"R-0000000004 MODIFICADO\",\r\n    \"codeProductSubtype\" : \"PS-0000000005 MODIFICADO\",\r\n    \"codeProductSubtypeRule\" : \"PSR-0000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productsubtyperule/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productsubtyperule",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint product_type",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"PASIVOS - CUENTAS BANCARIAS\",\r\n    \"description\" : \"PASIVOS - CUENTAS BANCARIAS\",\r\n    \"state\" : \"1\",\r\n    \"codeProductType\" : \"PT-0000000004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"PASIVOS - CUENTAS BANCARIAS MODIFICADO\",\r\n    \"description\" : \"PASIVOS - CUENTAS BANCARIAS MODIFICADO\",\r\n    \"state\" : \"1\",\r\n    \"codeProductType\" : \"PT-0000000004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/productType/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productType",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/productType/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"productType",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint rule",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"codeRule\" : \"R-0000000008\",\r\n    \"name\" : \"LÍMITE MÁXIMO MOVIMIENTO MENSUAL - DATO \",\r\n    \"description\" : \"LÍMITE MÁXIMO MOVIMIENTO MENSUAL - DATO\",\r\n    \"value\" : \"4\",\r\n    \"state\" : \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/rulecontroller/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"rulecontroller",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/rulecontroller",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"rulecontroller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"codeRule\" : \"R-0000000008\",\r\n    \"name\" : \"LÍMITE MÁXIMO MOVIMIENTO MENSUAL - DATO MODIFICADO\",\r\n    \"description\" : \"LÍMITE MÁXIMO MOVIMIENTO MENSUAL - DATO MODIFICADO\",\r\n    \"value\" : \"4\",\r\n    \"state\" : \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/api/rulecontroller/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"rulecontroller",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/api/rulecontroller/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"rulecontroller",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

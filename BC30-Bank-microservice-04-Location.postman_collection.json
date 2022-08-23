@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "2f77f07e-21f8-47c1-b440-92f30ce36be0",
+		"name": "BC30-Project02-Bank-microservice-04-Location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22592653"
+	},
+	"item": [
+		{
+			"name": "Endpoint location",
+			"item": [
+				{
+					"name": "01-create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readByCodeLocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/location/readByCodeLocation/L-0000000001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"location",
+								"readByCodeLocation",
+								"L-0000000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/location/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/location/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "c53565a2-1731-4206-816d-63b548646798",
+		"name": "BC30-Project02-Bank-microservice-02-Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17565278"
+	},
+	"item": [
+		{
+			"name": "Endpoint customer",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\" : 5, \r\n    \"codeClient\" : \"DT-005\", \r\n    \"staffNameFirst\" : \"Test001\", \r\n    \"staffNameSecond\" : \"test 001\" , \r\n    \"staffSurnameSecond\" : \"OMG\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"codeClient\" : \"DT-005\", \r\n    \"staffNameFirst\" : \"Silvia\", \r\n    \"staffNameSecond\" : \"Palamar\" , \r\n    \"staffSurnameSecond\" : \"OMG\",\r\n    \"staffCellphone\" : \"0000999\", \r\n    \"staffAddress\" : \"Fake Street 123\", \r\n    \"businessTelephone\" : \"9908889\" , \r\n    \"businessTradeName\" : \"OMG\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customer/updateById/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customer",
+								"updateById",
+								"5"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customer/deleteById/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customer",
+								"deleteById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint document",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\" : 4,\r\n    \"state\" : \"0\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codeClient\" : \"C-0000000002\",\r\n    \"codeDocument\" : \"D-0000000006\",\r\n    \"number\" : \"78965478\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/document/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"document",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"id\" : 4,\r\n    \"state\" : \"0\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codeClient\" : \"C-0000000002\",\r\n    \"codeDocument\" : \"D-0000000001\",\r\n    \"number\" : \"78965488\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/document/updateById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"document",
+								"updateById",
+								"4"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/document/deleteById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"document",
+								"deleteById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint documentType",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\" : 9,\r\n    \"name\" : \"Documento Ejemplo\",\r\n    \"description\" : \"EJEMPLO DE DOCUMENTO\",\r\n    \"state\" : \"1\",\r\n    \"codeDocumentType\" : \"DT-0000000009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/documentType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/documentType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 9,\r\n    \"name\" : \"Documento Ejemplo Actualización\",\r\n    \"description\" : \"EJEMPLO DE DOCUMENTO ACTUALIZACIÓN\",\r\n    \"state\" : \"1\",\r\n    \"codeDocumentType\" : \"DT-0000000009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/documentType/updateById/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType",
+								"updateById",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/documentType/deleteById/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType",
+								"deleteById",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint customer_type",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CLIENTE PERSONAL REGULAR\",\r\n    \"description\" : \"CLIENTE PERSONAL REGULAR\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomerType\" : \"CT-0000000005\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CLIENTE PERSONAL REGULAR MODIFICADO\",\r\n    \"description\" : \"CLIENTE PERSONAL REGULAR MODIFICADO\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomerType\" : \"CT-0000000005\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/updateById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"updateById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/deleteById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"deleteById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
