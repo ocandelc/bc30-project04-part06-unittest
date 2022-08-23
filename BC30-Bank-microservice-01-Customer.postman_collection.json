@@ -24,12 +24,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customer/create",
+							"raw": "http://localhost:8091/api/customer/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customer",
@@ -60,12 +60,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customer/updateById/5",
+							"raw": "http://localhost:8091/api/customer/updateById/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customer",
@@ -89,12 +89,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/customer",
+							"raw": "http://localhost:8091/api/customer",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customer"
@@ -130,12 +130,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customer/deleteById/5",
+							"raw": "http://localhost:8091/api/customer/deleteById/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customer",
@@ -166,12 +166,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/document/create",
+							"raw": "http://localhost:8091/api/document/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"document",
@@ -187,12 +187,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/document",
+							"raw": "http://localhost:8091/api/document",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"document"
@@ -216,12 +216,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/document/updateById/4",
+							"raw": "http://localhost:8091/api/document/updateById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"document",
@@ -257,12 +257,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/document/deleteById/4",
+							"raw": "http://localhost:8091/api/document/deleteById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"document",
@@ -293,12 +293,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/documentType/create",
+							"raw": "http://localhost:8091/api/documentType/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"documentType",
@@ -314,12 +314,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/documentType",
+							"raw": "http://localhost:8091/api/documentType",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"documentType"
@@ -343,12 +343,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/documentType/updateById/9",
+							"raw": "http://localhost:8091/api/documentType/updateById/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"documentType",
@@ -365,12 +365,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/documentType/deleteById/9",
+							"raw": "http://localhost:8091/api/documentType/deleteById/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"documentType",
@@ -401,12 +401,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customerType/create",
+							"raw": "http://localhost:8091/api/customerType/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customerType",
@@ -422,7 +422,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8091/api/customerType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"api",
+								"customerType"
+							]
 						}
 					},
 					"response": []
@@ -442,12 +451,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customerType/updateById/4",
+							"raw": "http://localhost:8091/api/customerType/updateById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customerType",
@@ -464,12 +473,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/customerType/deleteById/4",
+							"raw": "http://localhost:8091/api/customerType/deleteById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8092",
+							"port": "8091",
 							"path": [
 								"api",
 								"customerType",
