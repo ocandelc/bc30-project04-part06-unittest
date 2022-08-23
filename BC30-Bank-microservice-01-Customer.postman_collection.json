@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "c53565a2-1731-4206-816d-63b548646798",
-		"name": "BC30-Project02-Bank-microservice-02-Customer",
+		"_postman_id": "167a099d-b466-462e-b15e-f2f9e416bc47",
+		"name": "BC30-Bank-microservice-01-Customer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17565278"
+		"_exporter_id": "22592653"
 	},
 	"item": [
 		{
@@ -420,7 +420,10 @@
 					"name": "02-readAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
