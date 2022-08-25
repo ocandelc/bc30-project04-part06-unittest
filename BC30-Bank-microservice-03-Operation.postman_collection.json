@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Endpoint operation_passive",
+			"name": "Endpoint operationPassive",
 			"item": [
 				{
 					"name": "01-create",
@@ -36,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"codeOperationPassive\" : \"OP-0000000005\",\r\n    \"name\" : \"prueba\",\r\n    \"description\" : \"prueba\",\r\n    \"operationDate\" : \"2022-08-10T18:45:03.206+0000\",\r\n    \"principalBalance\" : \"0.0\",\r\n    \"balanceCurrent\" : \"0.0\",\r\n    \"balanceMove\" : \"0.0\",\r\n    \"balanceCommission\" : \"0.0\",\r\n    \"balanceNew\" : \"0.0\",\r\n    \"state\" : \"1\",\r\n    \"codeProduct\" : \"P-0000000001\",    \r\n    \"codeOperationType\" : \"OT-0000000001\"\r\n}",
+							"raw": "{\r\n    \"codeOperationPassive\" : \"OP-0000000003\",\r\n    \"name\" : \"prueba\",\r\n    \"description\" : \"prueba\",\r\n    \"operationDate\" : \"2022-08-10T18:45:03.206+0000\",\r\n    \"principalBalance\" : \"0.0\",\r\n    \"balanceCurrent\" : \"0.0\",\r\n    \"balanceMove\" : \"0.0\",\r\n    \"balanceCommission\" : \"0.0\",\r\n    \"balanceNew\" : \"0.0\",\r\n    \"state\" : \"1\",\r\n    \"codeProduct\" : \"P-0000000001\",    \r\n    \"codeOperationType\" : \"OT-0000000001\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -179,6 +179,34 @@
 								"api",
 								"operationPassive",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "05-kafka",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/operationPassive/kafka/publish?message=hola",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"operationPassive",
+								"kafka",
+								"publish"
+							],
+							"query": [
+								{
+									"key": "message",
+									"value": "hola"
+								}
 							]
 						}
 					},
