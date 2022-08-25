@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "167a099d-b466-462e-b15e-f2f9e416bc47",
+		"_postman_id": "6deefe17-137b-4a85-bb10-3ed0c4495619",
 		"name": "BC30-Bank-microservice-01-Customer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22592653"
+		"_exporter_id": "17565278"
 	},
 	"item": [
 		{
