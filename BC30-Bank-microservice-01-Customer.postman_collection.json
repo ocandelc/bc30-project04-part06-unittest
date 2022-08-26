@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "6deefe17-137b-4a85-bb10-3ed0c4495619",
-		"name": "BC30-Bank-microservice-01-Customer",
+		"_postman_id": "69ee597e-9c6f-4066-94ee-d4f4a866f73d",
+		"name": "BC30-Bank-microservice-01-Customer Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17565278"
 	},
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n    \"id\" : 5, \r\n    \"codeClient\" : \"DT-005\", \r\n    \"staffNameFirst\" : \"Test001\", \r\n    \"staffNameSecond\" : \"test 001\" , \r\n    \"staffSurnameSecond\" : \"OMG\"\r\n    }",
+							"raw": "{\r\n    \"id\" : 6,\r\n    \"staffNameFirst\" : \"Test\",\r\n    \"staffNameSecond\" : \"Test\",\r\n    \"staffSurnameFirst\" : \"Test\",\r\n    \"staffSurnameSecond\" : \"Test\",\r\n    \"staffBirthday\" : \"1999-04-19T05:00:00.000+0000\",\r\n    \"staffCellphone\" : \"991-696-400\",\r\n    \"staffGeoloc\" : \"010101\",\r\n    \"staffAddress\" : \"Calle Test\",\r\n    \"businessTradeName\" : \"\",\r\n    \"businessTaxName\" : \"\",\r\n    \"businessTaxIdentificationNumber\" : \"\",\r\n    \"businessTelephone\" : \"\",\r\n    \"businessGeoloc\" : \"\",\r\n    \"businessAddress\" : \"\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomer\" : \"C-0000000006\",\r\n    \"codeCustomerType\" : \"CT-0000000006\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,7 +24,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/customer/create",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customer",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -32,8 +32,8 @@
 							"port": "8091",
 							"path": [
 								"api",
-								"customer",
-								"create"
+								"business-microservice01-customer",
+								"customer"
 							]
 						}
 					},
@@ -52,7 +52,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \r\n    \"codeClient\" : \"DT-005\", \r\n    \"staffNameFirst\" : \"Silvia\", \r\n    \"staffNameSecond\" : \"Palamar\" , \r\n    \"staffSurnameSecond\" : \"OMG\",\r\n    \"staffCellphone\" : \"0000999\", \r\n    \"staffAddress\" : \"Fake Street 123\", \r\n    \"businessTelephone\" : \"9908889\" , \r\n    \"businessTradeName\" : \"OMG\"\r\n    }\r\n",
+							"raw": "{\r\n    \"id\" : 6,\r\n    \"staffNameFirst\" : \"Test Modificado\",\r\n    \"staffNameSecond\" : \"Test Modificado\",\r\n    \"staffSurnameFirst\" : \"Test Modificado\",\r\n    \"staffSurnameSecond\" : \"Test Modificado\",\r\n    \"staffBirthday\" : \"1999-04-19T05:00:00.000+0000\",\r\n    \"staffCellphone\" : \"991-696-400\",\r\n    \"staffGeoloc\" : \"010101\",\r\n    \"staffAddress\" : \"Calle Test\",\r\n    \"businessTradeName\" : \"\",\r\n    \"businessTaxName\" : \"\",\r\n    \"businessTaxIdentificationNumber\" : \"\",\r\n    \"businessTelephone\" : \"\",\r\n    \"businessGeoloc\" : \"\",\r\n    \"businessAddress\" : \"\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomer\" : \"C-0000000006\",\r\n    \"codeCustomerType\" : \"CT-0000000006\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -60,7 +60,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/customer/updateById/5",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customer/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -68,8 +68,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customer",
-								"updateById",
 								"5"
 							],
 							"query": [
@@ -89,7 +89,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/customer",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customer",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -97,6 +97,7 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customer"
 							]
 						}
@@ -130,7 +131,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/customer/deleteById/5",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customer/6",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -138,9 +139,9 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customer",
-								"deleteById",
-								"5"
+								"6"
 							]
 						}
 					},
@@ -166,7 +167,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/document/create",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/document",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -174,8 +175,8 @@
 							"port": "8091",
 							"path": [
 								"api",
-								"document",
-								"create"
+								"business-microservice01-customer",
+								"document"
 							]
 						}
 					},
@@ -187,7 +188,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/document",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/document",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -195,6 +196,7 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"document"
 							]
 						}
@@ -208,7 +210,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \r\n    \"id\" : 4,\r\n    \"state\" : \"0\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codeClient\" : \"C-0000000002\",\r\n    \"codeDocument\" : \"D-0000000001\",\r\n    \"number\" : \"78965488\"\r\n}",
+							"raw": "{    \r\n    \"id\" : 4,\r\n    \"state\" : \"0\",\r\n    \"codeDocumentType\" : \"DT-0000000002\",\r\n    \"codeClient\" : \"C-0000000002\",\r\n    \"codeDocument\" : \"D-0000000001\",\r\n    \"number\" : \"78965488 MODIFICADO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -216,7 +218,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/document/updateById/4",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/document/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -224,8 +226,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"document",
-								"updateById",
 								"4"
 							],
 							"query": [
@@ -257,7 +259,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/document/deleteById/4",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/document/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -265,8 +267,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"document",
-								"deleteById",
 								"4"
 							]
 						}
@@ -293,7 +295,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/documentType/create",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/documentType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -301,8 +303,8 @@
 							"port": "8091",
 							"path": [
 								"api",
-								"documentType",
-								"create"
+								"business-microservice01-customer",
+								"documentType"
 							]
 						}
 					},
@@ -314,7 +316,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/documentType",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/documentType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -322,6 +324,7 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"documentType"
 							]
 						}
@@ -343,7 +346,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/documentType/updateById/9",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/documentType/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -351,8 +354,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"documentType",
-								"updateById",
 								"9"
 							]
 						}
@@ -365,7 +368,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/documentType/deleteById/9",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/documentType/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -373,8 +376,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"documentType",
-								"deleteById",
 								"9"
 							]
 						}
@@ -401,7 +404,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/customerType/create",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customerType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -409,8 +412,8 @@
 							"port": "8091",
 							"path": [
 								"api",
-								"customerType",
-								"create"
+								"business-microservice01-customer",
+								"customerType"
 							]
 						}
 					},
@@ -422,7 +425,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/customerType",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customerType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -430,6 +433,7 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customerType"
 							]
 						}
@@ -451,7 +455,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/customerType/updateById/4",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customerType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -459,8 +463,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customerType",
-								"updateById",
 								"4"
 							]
 						}
@@ -473,7 +477,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/customerType/deleteById/4",
+							"raw": "http://localhost:8091/api/business-microservice01-customer/customerType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -481,8 +485,8 @@
 							"port": "8091",
 							"path": [
 								"api",
+								"business-microservice01-customer",
 								"customerType",
-								"deleteById",
 								"4"
 							]
 						}
