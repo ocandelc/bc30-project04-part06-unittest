@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "78600eaf-c7aa-4cc7-8c33-283c1217896d",
+		"_postman_id": "32a11c8d-372e-4563-8ab5-a641a0fbec69",
 		"name": "BC30-Bank-microservice-02-Product",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22592653"
+		"_exporter_id": "17565278"
 	},
 	"item": [
 		{
@@ -28,7 +28,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
+							"raw": "{\r\n    \"id\" : \"9\",\r\n    \"name\" : \"cuenta prueba\",\r\n    \"description\" : \"cuenta prueba\",\r\n    \"bankAccountNumber\" : \"100-193-0015535759\",\r\n    \"interbankAccountNumber\" : \"01-100-193-0015535759\",\r\n    \"state\" : \"1\",\r\n    \"codeProductSubtype\" : \"PS-0000000001\",\r\n    \"codeCurrencyType\" : \"CT-0000000001\",\r\n    \"codeProduct\" : \"P-0000000001\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -36,7 +36,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/product/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -44,8 +44,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"product",
-								"create"
+								"business-microservice02-product",
+								"product"
 							]
 						}
 					},
@@ -57,7 +57,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/product",
+							"raw": "http://localhost:8092/api/business-microservice02-product/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -65,6 +65,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"product"
 							]
 						}
@@ -90,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"raw": "{\r\n    \"id\" : \"9\",\r\n    \"name\" : \"cuenta prueba modificado\",\r\n    \"description\" : \"cuenta prueba modificado\",\r\n    \"bankAccountNumber\" : \"100-193-0015535759\",\r\n    \"interbankAccountNumber\" : \"01-100-193-0015535759\",\r\n    \"state\" : \"1\",\r\n    \"codeProductSubtype\" : \"PS-0000000001\",\r\n    \"codeCurrencyType\" : \"CT-0000000001\",\r\n    \"codeProduct\" : \"P-0000000001\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -98,7 +99,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/product/update/2",
+							"raw": "http://localhost:8092/api/business-microservice02-product/product/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -106,8 +107,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"product",
-								"update",
 								"2"
 							]
 						}
@@ -133,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,7 +142,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/product/delete/2",
+							"raw": "http://localhost:8092/api/business-microservice02-product/product/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -149,9 +150,9 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"product",
-								"delete",
-								"2"
+								"9"
 							]
 						}
 					},
@@ -160,7 +161,7 @@
 			]
 		},
 		{
-			"name": "Endpoint currency_type",
+			"name": "Endpoint currencyType",
 			"item": [
 				{
 					"name": "01-create",
@@ -177,7 +178,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/currencytype/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/currencytype",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -185,8 +186,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"currencytype",
-								"create"
+								"business-microservice02-product",
+								"currencytype"
 							]
 						}
 					},
@@ -198,7 +199,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/currencytype",
+							"raw": "http://localhost:8092/api/business-microservice02-product/currencytype",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -206,6 +207,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"currencytype"
 							]
 						}
@@ -227,7 +229,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/currencytype/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/currencytype/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -235,8 +237,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"currencytype",
-								"update",
 								"4"
 							]
 						}
@@ -249,7 +251,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/currencytype/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/currencytype/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -257,8 +259,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"currencytype",
-								"delete",
 								"4"
 							]
 						}
@@ -285,7 +287,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/person/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/person",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -293,8 +295,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"person",
-								"create"
+								"business-microservice02-product",
+								"person"
 							]
 						}
 					},
@@ -306,7 +308,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/person",
+							"raw": "http://localhost:8092/api/business-microservice02-product/person",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -314,6 +316,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"person"
 							]
 						}
@@ -335,7 +338,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/person/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/person/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -343,8 +346,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"person",
-								"update",
 								"4"
 							]
 						}
@@ -357,7 +360,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/person/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/person/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -365,8 +368,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"person",
-								"delete",
 								"4"
 							]
 						}
@@ -376,7 +379,7 @@
 			]
 		},
 		{
-			"name": "Endpoint person_type",
+			"name": "Endpoint personType",
 			"item": [
 				{
 					"name": "01-create",
@@ -393,7 +396,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/personType/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/personType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -401,8 +404,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"personType",
-								"create"
+								"business-microservice02-product",
+								"personType"
 							]
 						}
 					},
@@ -414,7 +417,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/personType",
+							"raw": "http://localhost:8092/api/business-microservice02-product/personType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -422,6 +425,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"personType"
 							]
 						}
@@ -443,7 +447,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/personType/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/personType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -451,8 +455,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"personType",
-								"update",
 								"4"
 							]
 						}
@@ -465,7 +469,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/personType/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/personType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -473,8 +477,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"personType",
-								"delete",
 								"4"
 							]
 						}
@@ -484,7 +488,7 @@
 			]
 		},
 		{
-			"name": "Endpoint product_client",
+			"name": "Endpoint productClient",
 			"item": [
 				{
 					"name": "01-create",
@@ -501,7 +505,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productClient/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productClient",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -509,8 +513,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"productClient",
-								"create"
+								"business-microservice02-product",
+								"productClient"
 							]
 						}
 					},
@@ -522,7 +526,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productClient",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productClient",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -530,6 +534,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productClient"
 							]
 						}
@@ -541,8 +546,17 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"state\" : \"1\",\r\n    \"codeClient\" : \"C-0000000004 MD\",\r\n    \"codeProduct\" : \"P-0000000004 MD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8092/api/productClient/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productClient/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -550,8 +564,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productClient",
-								"update",
 								"4"
 							]
 						}
@@ -564,7 +578,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productClient/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productClient/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -572,8 +586,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productClient",
-								"delete",
 								"4"
 							]
 						}
@@ -583,7 +597,7 @@
 			]
 		},
 		{
-			"name": "Endpoint product_person",
+			"name": "Endpoint productPerson",
 			"item": [
 				{
 					"name": "01-create",
@@ -600,7 +614,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productPerson/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productPerson",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -608,8 +622,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"productPerson",
-								"create"
+								"business-microservice02-product",
+								"productPerson"
 							]
 						}
 					},
@@ -621,7 +635,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productPerson",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productPerson",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -629,6 +643,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productPerson"
 							]
 						}
@@ -650,7 +665,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productPerson/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productPerson/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -658,8 +673,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productPerson",
-								"update",
 								"4"
 							]
 						}
@@ -672,7 +687,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productPerson/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productPerson/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -680,8 +695,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productPerson",
-								"delete",
 								"4"
 							]
 						}
@@ -691,7 +706,7 @@
 			]
 		},
 		{
-			"name": "Endpoint product_subtype",
+			"name": "Endpoint productSubtype",
 			"item": [
 				{
 					"name": "01-create",
@@ -708,7 +723,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtype/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtype",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -716,8 +731,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"productsubtype",
-								"create"
+								"business-microservice02-product",
+								"productsubtype"
 							]
 						}
 					},
@@ -729,7 +744,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtype",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtype",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -737,6 +752,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtype"
 							]
 						}
@@ -758,7 +774,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtype/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtype/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -766,8 +782,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtype",
-								"update",
 								"4"
 							]
 						}
@@ -780,7 +796,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtype/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtype/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -788,8 +804,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtype",
-								"delete",
 								"4"
 							]
 						}
@@ -799,7 +815,7 @@
 			]
 		},
 		{
-			"name": "Endpoint product_subtype_rule",
+			"name": "Endpoint productSubtypeRule",
 			"item": [
 				{
 					"name": "01-create",
@@ -816,7 +832,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtyperule/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtyperule",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -824,8 +840,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"productsubtyperule",
-								"create"
+								"business-microservice02-product",
+								"productsubtyperule"
 							]
 						}
 					},
@@ -837,7 +853,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtyperule",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtyperule",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -845,6 +861,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtyperule"
 							]
 						}
@@ -866,7 +883,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtyperule/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtyperule/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -874,8 +891,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtyperule",
-								"update",
 								"4"
 							]
 						}
@@ -885,10 +902,10 @@
 				{
 					"name": "04-delete",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productsubtyperule/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productsubtyperule/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -896,8 +913,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productsubtyperule",
-								"delete",
 								"4"
 							]
 						}
@@ -907,7 +924,7 @@
 			]
 		},
 		{
-			"name": "Endpoint product_type",
+			"name": "Endpoint productType",
 			"item": [
 				{
 					"name": "01-create",
@@ -924,7 +941,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productType/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -932,8 +949,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"productType",
-								"create"
+								"business-microservice02-product",
+								"productType"
 							]
 						}
 					},
@@ -945,7 +962,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productType",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productType",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -953,6 +970,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productType"
 							]
 						}
@@ -974,7 +992,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/productType/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -982,8 +1000,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productType",
-								"update",
 								"4"
 							]
 						}
@@ -996,7 +1014,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/productType/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/productType/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1004,8 +1022,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"productType",
-								"delete",
 								"4"
 							]
 						}
@@ -1032,7 +1050,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/rulecontroller/create",
+							"raw": "http://localhost:8092/api/business-microservice02-product/rulecontroller",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1040,8 +1058,8 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"rulecontroller",
-								"create"
+								"business-microservice02-product",
+								"rulecontroller"
 							]
 						}
 					},
@@ -1053,7 +1071,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/rulecontroller",
+							"raw": "http://localhost:8092/api/business-microservice02-product/rulecontroller",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1061,6 +1079,7 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"rulecontroller"
 							]
 						}
@@ -1082,7 +1101,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/rulecontroller/update/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/rulecontroller/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1090,8 +1109,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"rulecontroller",
-								"update",
 								"4"
 							]
 						}
@@ -1104,7 +1123,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/rulecontroller/delete/4",
+							"raw": "http://localhost:8092/api/business-microservice02-product/rulecontroller/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1112,8 +1131,8 @@
 							"port": "8092",
 							"path": [
 								"api",
+								"business-microservice02-product",
 								"rulecontroller",
-								"delete",
 								"4"
 							]
 						}
