@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "69ee597e-9c6f-4066-94ee-d4f4a866f73d",
-		"name": "BC30-Bank-microservice-01-Customer Copy",
+		"name": "BC30-Bank-microservice-01-Customer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17565278"
 	},
@@ -387,7 +387,7 @@
 			]
 		},
 		{
-			"name": "Endpoint customer_type",
+			"name": "Endpoint customerType",
 			"item": [
 				{
 					"name": "01-create",
