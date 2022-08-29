@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0d4d39a3-f592-4591-972d-e4b1b76a4f74",
+		"_postman_id": "15f702f8-6638-4946-bdef-63d1dc5c6628",
 		"name": "BC30-Bank-microservice-03-Operation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22592653"
+		"_exporter_id": "17565278"
 	},
 	"item": [
 		{
@@ -207,6 +207,333 @@
 									"key": "message",
 									"value": "hola"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint operationActive",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"name\" : \"prueba\",\r\n    \"description\" : \"prueba\",\r\n    \"operationDate\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"creditAmount\" : 0.0,\r\n    \"principalBalance\" : 0.0,\r\n    \"creditTerm\" : 0.0,\r\n    \"feesPaid\" : 0.0,\r\n    \"feesToPay\" : 0.0,\r\n    \"state\" : \"1\",\r\n    \"codeOperationType\" : \"OT-0000000001\",\r\n    \"codeOperationActive\" : \"OA-0000000001\",\r\n    \"codeProduct\" : \"P-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"name\" : \"prueba modificado\",\r\n    \"description\" : \"prueba modificado\",\r\n    \"operationDate\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"creditAmount\" : 0.0,\r\n    \"principalBalance\" : 0.0,\r\n    \"creditTerm\" : 0.0,\r\n    \"feesPaid\" : 0.0,\r\n    \"feesToPay\" : 0.0,\r\n    \"state\" : \"1\",\r\n    \"codeOperationType\" : \"OT-0000000001\",\r\n    \"codeOperationActive\" : \"OA-0000000001\",\r\n    \"codeProduct\" : \"P-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActive/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActive",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActive/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActive",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint operationType",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"codeOperationType\" : \"OT-0000000001\",\r\n    \"name\" : \"PRUEBA\",\r\n    \"description\" : \"PRUEBA\",\r\n    \"state\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"codeOperationType\" : \"OT-0000000001\",\r\n    \"name\" : \"PRUEBA MODIFICADO\",\r\n    \"description\" : \"PRUEBA MODIFICADO\",\r\n    \"state\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationType/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationType",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationType/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationType",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint operationActiveDetail",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"state\" : \"1\",\r\n    \"codeOperationType\" : \"OT-0000000003\",\r\n    \"amountPayable\" : 50.0,\r\n    \"capital\" : 100.0,\r\n    \"codeLocation\" : \"L-0000000001\",\r\n    \"dateAccountStatus\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"interest\" : 10.0,\r\n    \"lastDayForPayment\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"codeOperationActive\" : \"OA-0000000001\",\r\n    \"codeOperationActiveDetail\" : \"OAD-0000000001\",\r\n    \"paymentNumber\" : \"1\",\r\n    \"codeCustomerPaying\" : \"C-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActiveDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActiveDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActiveDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActiveDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"state\" : \"1\",\r\n    \"codeOperationType\" : \"OT-0000000003\",\r\n    \"amountPayable\" : 30.0,\r\n    \"capital\" : 80.0,\r\n    \"codeLocation\" : \"L-0000000001\",\r\n    \"dateAccountStatus\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"interest\" : 10.0,\r\n    \"lastDayForPayment\" : \"2022-08-12T18:45:03.206+0000\",\r\n    \"codeOperationActive\" : \"OA-0000000001\",\r\n    \"codeOperationActiveDetail\" : \"OAD-0000000001\",\r\n    \"paymentNumber\" : \"1\",\r\n    \"codeCustomerPaying\" : \"C-0000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActiveDetail/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActiveDetail",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/business-microservice03-operation/operationActiveDetail/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"business-microservice03-operation",
+								"operationActiveDetail",
+								"4"
 							]
 						}
 					},
