@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "d5e9111a-70a2-4ae0-917a-669b2108cde3",
+		"name": "BC30-Bank-microservice-0502-Card",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22592653"
+	},
+	"item": [
+		{
+			"name": "Endpoint card",
+			"item": [
+				{
+					"name": "01-create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeCard\" : \"C-0000000003\",\r\n    \"name\" : \"CARD 03\",\r\n    \"description\" : \"CARD 03\",\r\n    \"state\" : \"1\",\r\n    \"codeCardType\" : \"CT-0000000001\",\r\n    \"dateExpiration\" : \"2022-08-10T18:45:03.206+0000\",\r\n    \"numberCVV\" : \"0000-1111-2222-33333\",\r\n    \"numberPIN\" : \"123456\",\r\n    \"numberHead\" : \"0000-1111-2222-33333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/business-microservice05-card/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"business-microservice05-card",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/business-microservice05-card/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"business-microservice05-card",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readByCodeCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/business-microservice05-card/card/readByCodeCard/C-0000000003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"business-microservice05-card",
+								"card",
+								"readByCodeCard",
+								"C-0000000003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"630ac6e3949faa25bcaa703a\",\r\n        \"codeCard\": \"C-0000000003\",\r\n        \"name\": \"CARD 030303\",\r\n        \"description\": \"CARD 03\",\r\n        \"dateExpiration\": \"2022-08-10T18:45:03.206+00:00\",\r\n        \"numberHead\": \"0000-1111-2222-33333\",\r\n        \"numberCVV\": \"0000-1111-2222-33333\",\r\n        \"numberPIN\": \"123456\",\r\n        \"state\": \"1\",\r\n        \"codeCardType\": \"CT-0000000001\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/business-microservice05-card/card/630ac6e3949faa25bcaa703a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"business-microservice05-card",
+								"card",
+								"630ac6e3949faa25bcaa703a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/business-microservice05-card/card/630ac6e3949faa25bcaa703a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"business-microservice05-card",
+								"card",
+								"630ac6e3949faa25bcaa703a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
